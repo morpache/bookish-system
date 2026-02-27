@@ -2,20 +2,25 @@ package main
 
 import (
 	"fmt"
+	"log"
 )
 
-// TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
 func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	s := "gopher"
-	fmt.Printf("Hello and welcome, %s!\n", s)
-	fmt.Println("Fuck you, employment")
-
-	for i := 1; i <= 15; i++ {
-		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
-		fmt.Println("i =", 100/i)
+	var username string
+	var age int
+	println("Hey! Print ur name pls :3")
+	_, err := fmt.Scan(&username)
+	if err != nil {
+		log.Fatal(err)
+	}
+	println("Oh dear " + username + ", how old are you?")
+	_, err = fmt.Scan(&age)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if age < 30 {
+		println("OMG who's this twinkie-tinkie")
+	} else {
+		println("Omg men, u r dilf :-0")
 	}
 }
