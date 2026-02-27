@@ -23,4 +23,5 @@ func main() {
 	} else {
 		println("Omg men, u r dilf :-0")
 	}
+	println("is vibecoding a good thing?")
 }
